@@ -5,9 +5,12 @@ import { Provider } from 'react-redux';
 
 import { createStore } from 'redux';
 import rootReducer from './reducers';
+import { addCharacter } from './actions';
 
 const store = createStore(rootReducer);
 console.log(store.getState());
+store.subscribe(() => console.log(store.getState()));
+store.dispatch(addCharacter(2));
 
 ReactDOM.render(
   <React.StrictMode>
