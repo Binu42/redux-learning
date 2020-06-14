@@ -1,6 +1,6 @@
 export const ADD_CHARACTER = 'ADD_CHARACTER';
 
-export function addCharacter(id) {
+export function addCharacterById(id) {
   const action = {
     type: ADD_CHARACTER,
     id,
